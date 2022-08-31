@@ -1,10 +1,9 @@
 import { insert,CardInsertData } from "../repositories/cardRepository.js";
-import { cardService } from "../services/Services.js";
 
 export async function createCard(req, res) {
     const card:CardInsertData = req.body;
     try {
-     
+      
       await insert(card);
 
       return res.sendStatus(200);
